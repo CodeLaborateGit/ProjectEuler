@@ -10,7 +10,10 @@ void primeLim(size_t lim)
     int i,j;
     bool* primes = NULL;
     primes  = new bool[lim];
-    for(i = 0;i<lim;++i)
+    primes[0] = false;
+    primes[1] = false;
+
+    for(i = 2;i<lim;++i)
     {
         primes[i] = true;
     }
@@ -40,4 +43,3 @@ int main()
     primeLim(2000000);
     return 0;
 }
-    
